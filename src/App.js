@@ -4,6 +4,7 @@ import Register from './components/register';
 import Login from './components/login';
 import Home from './components/home';
 import Replies from './components/replies';
+import LandingPage from './components/landingPage';
 
 import './App.css';
 import Header from './components/header';
@@ -19,7 +20,8 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={ <Login /> } />
+            <Route path="/" element={ <LandingPage /> } />
+            <Route path="/login" element={ <Login /> } />
             <Route path="/register" element={ <Register /> } />
             <Route path="/dashboard" element={ <Home /> } /> 
             <Route path="/:id/replies" element={ <Replies /> } />
