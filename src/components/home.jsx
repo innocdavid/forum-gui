@@ -44,6 +44,7 @@ const Home = () => {
                     <div style={{ display: "flex", flexDirection: "column"}}>
                         <label htmlFor="description">Description</label>
                         <textarea 
+                            rows={5}
                             type="text"
                             name="description"
                             id="description"
