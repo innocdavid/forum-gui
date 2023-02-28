@@ -2,13 +2,13 @@ import React,{ useState } from "react";
 
 const Home = () => {
 
-    const [thread, setThread] = useState({
+    const [topic, setTopic] = useState({
         title: "",
         description: ""
     });
 
     const handleChange = (e) => {
-        setThread(prev => ({
+        setTopic(prev => ({
             ...prev, [e.target.name]: e.target.value
         }))
     }
@@ -37,18 +37,18 @@ const Home = () => {
                             name="title"
                             id="title"
                             required
-                            value={ thread.title }
+                            value={ topic.title }
                             onChange={ handleChange }
                         />
                     </div>
                     <div style={{ display: "flex", flexDirection: "column"}}>
-                        <label htmlFor="description">Password</label>
+                        <label htmlFor="description">Description</label>
                         <textarea 
                             type="text"
                             name="description"
                             id="description"
                             required
-                            value={ thread.description }
+                            value={ topic.description }
                             onChange={ handleChange }
                         />
                     </div>
