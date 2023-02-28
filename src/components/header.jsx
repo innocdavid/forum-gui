@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const signOut = () => {
@@ -13,9 +14,12 @@ const Header = () => {
                 display: "flex", 
             }}
         >
-            <h2>talkForum</h2>
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <button onClick={ signOut }>Sign out</button>
+            <Link to="/">
+             <h2>talkForum</h2>
+            </Link>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px"}}>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
             </div>
             
         </nav>
